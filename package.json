@@ -1,0 +1,21 @@
+{
+  "name": "Cha",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "android": "react-native run-android"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-native": "^0.40.0",
+    "react-native-keep-awake": "^2.0.2",
+    "react-native-router-flux": "^3.37.0",
+    "react-native-tts": "^1.1.0",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "redux-actions": "^1.2.1",
+    "redux-logger": "^2.7.0",
+    "redux-thunk": "^2.1.0"
+  }
+}
