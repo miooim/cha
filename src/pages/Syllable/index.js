@@ -1,18 +1,45 @@
 import SyllableComponent from './Syllable';
 import {connect} from 'react-redux';
-import {getNav, getSyllable} from '../../reducers';
+import {
+  getNav, 
+  getSyllable,
+  getTts,
+  getStt
+} from '../../reducers';
 
-import * as actions from './actions';
+import {
+  getRandomSyllable, 
+  ttsSpeak, 
+  ttsStop,
+  sttStart,
+  sttSubscribe,
+  sttSetup,
+  sttClear,
+  sttStop,
+  sttDestroy,
+  sttCancel
+} from '../../actions';
 
 const mapStateToProps = (state, props) => {
   return {
     ...getNav(state),
+    ...getTts(state),
+    ...getStt(state),
     ...getSyllable(state)
   }
 };
 
 const mapDispatchToProps = {
-  ...actions
+  getRandomSyllable,
+  ttsSpeak,
+  ttsStop,
+  sttStart,
+  sttSubscribe,
+  sttSetup,
+  sttClear,
+  sttStop,
+  sttDestroy,
+  sttCancel
 };
 
 export const Syllable = connect(mapStateToProps, mapDispatchToProps)(SyllableComponent);

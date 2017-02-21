@@ -11,6 +11,8 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.corbt.keepawake.KCKeepAwakePackage;
+// import com.wmjmc.reactspeech.VoicePackage;
+import com.wenkesj.voice.VoicePackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -19,7 +21,7 @@ public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
     @Override
-    protected boolean getUseDeveloperSupport() {
+    public boolean getUseDeveloperSupport() {
       return BuildConfig.DEBUG;
     }
 
@@ -28,7 +30,8 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
           new TextToSpeechPackage(),
-          new KCKeepAwakePackage()
+          new KCKeepAwakePackage(),
+          new VoicePackage()
       );
     }
   };
